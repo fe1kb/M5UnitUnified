@@ -10,6 +10,9 @@
 */
 #include "adapter_gpio.hpp"
 #include <driver/gpio.h>
+#if defined(M5_UNIT_UNIFIED_USING_ADC_ONESHOT)
+#include <esp_adc/adc_oneshot.h>
+#endif
 
 #if defined(M5_UNIT_UNIFIED_USING_RMT_V2)
 #pragma message "Using RMT v2,Oneshot"
